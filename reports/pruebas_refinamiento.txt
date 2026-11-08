@@ -1,0 +1,16 @@
+PROMPT 10 - REFINAMIENTO, SINCRONIZACION Y VALIDACION
+
+COMANDO: uvx ty check app.py app_pages ui tests/test_refinement.py --python .venv/Scripts/python.exe
+All checks passed!
+
+
+COMANDO: C:\Users\User\Desktop\Olist\.venv\Scripts\python.exe -m pytest -q
+........................................................................ [ 38%]
+........................................................................ [ 76%]
+............................................                             [100%]
+188 passed in 16.57s
+
+Integridad: 119 archivos cientificos originales; modificados: []
+API real Streamlit: 36 interacciones ready. Cinco velocidades, pausa/reanudacion, 1217/1301, cambio E0-E1 durante reproduccion, ambas ventanas, final y cinco pantallas.
+JavaScript real ejecutado en Node con DOM simulado: fotograma tardio rechazado; fecha, niveles, flujos, progreso, indicadores y marcador comprobados. Esta prueba no renderiza CSS.
+Navegador: no disponible (apps=[], browsers=[]). No se afirma inspeccion visual; ver docs/refinamiento_interfaz.md.

@@ -1,0 +1,4 @@
+variable,NMAE_cumple,NRMSE_cumple,error_pico_cumple,error_final_cumple,sesgo_mismo_signo_4_bloques,cumple_criterios_cuantitativos
+X1,False,False,False,True,False,False
+X2,False,False,True,True,True,False
+X3,False,False,True,True,False,False

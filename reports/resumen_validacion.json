@@ -1,0 +1,158 @@
+{
+  "phase": "4B",
+  "model": "base",
+  "parameters": {
+    "alpha": 0.10202378368368686,
+    "beta": 0.013240792867426554,
+    "gamma": 0.004071911987908591
+  },
+  "parameter_units": "1/hora",
+  "period": {
+    "start": "2018-03-02 22:00:00",
+    "end": "2018-10-17 14:00:00",
+    "intervals": 5488,
+    "states": 5489
+  },
+  "initial_state": [
+    113.0,
+    586.0,
+    3005.0,
+    53963.0
+  ],
+  "initial_total": 57667.0,
+  "purchases": 37415.0,
+  "expected_final_total": 95082.0,
+  "final_state": [
+    1.091097865448799e-51,
+    5.037792036875029e-05,
+    20.748535988493607,
+    95061.25141363285
+  ],
+  "final_observed_state": [
+    0.0,
+    0.0,
+    0.0,
+    95082.0
+  ],
+  "scales": {
+    "X1": 44.39279856283684,
+    "X2": 330.3622588455831,
+    "X3": 1004.1355932203389,
+    "X4_incremental": 15774.909318128564,
+    "P": 1378.890650628759
+  },
+  "flow_scales": [
+    4.495352651722253,
+    4.449582129188472,
+    4.214871514488792
+  ],
+  "integration": {
+    "method": "RK4",
+    "h_hours": 0.25,
+    "substeps": 4,
+    "initializations": 1,
+    "no_corrections": true
+  },
+  "max_conservation_error": 9.458744898438454e-10,
+  "agentpy_states_max_difference": 0.0,
+  "agentpy_transfers_max_difference": 0.0,
+  "finite_nonnegative_states": true,
+  "nonnegative_transfers": true,
+  "X4_nondecreasing": true,
+  "convergence": [
+    {
+      "h_grueso": 0.25,
+      "h_fino": 0.125,
+      "max_diferencia": 2.3753568711981643e-07,
+      "NRMSE_numerico_por_estado": [
+        1.3084406297020717e-09,
+        2.0199429242065256e-10,
+        8.962266057756993e-12,
+        7.5557661196029e-14
+      ],
+      "max_diferencia_transferencias": 3.157198431580355e-07,
+      "error_max_conservacion_malla_fina": 1.57160684466362e-09
+    },
+    {
+      "h_grueso": 0.125,
+      "h_fino": 0.0625,
+      "max_diferencia": 1.46847014548257e-08,
+      "NRMSE_numerico_por_estado": [
+        8.088424484119667e-11,
+        1.2486665150198594e-11,
+        5.540824474039818e-13,
+        3.290846826311972e-14
+      ],
+      "max_diferencia_transferencias": 1.9516932070473558e-08,
+      "error_max_conservacion_malla_fina": 8.149072527885437e-10
+    }
+  ],
+  "criteria": [
+    {
+      "variable": "X1",
+      "NMAE_cumple": false,
+      "NRMSE_cumple": false,
+      "error_pico_cumple": false,
+      "error_final_cumple": true,
+      "sesgo_mismo_signo_4_bloques": false,
+      "cumple_criterios_cuantitativos": false
+    },
+    {
+      "variable": "X2",
+      "NMAE_cumple": false,
+      "NRMSE_cumple": false,
+      "error_pico_cumple": true,
+      "error_final_cumple": true,
+      "sesgo_mismo_signo_4_bloques": true,
+      "cumple_criterios_cuantitativos": false
+    },
+    {
+      "variable": "X3",
+      "NMAE_cumple": false,
+      "NRMSE_cumple": false,
+      "error_pico_cumple": true,
+      "error_final_cumple": true,
+      "sesgo_mismo_signo_4_bloques": false,
+      "cumple_criterios_cuantitativos": false
+    }
+  ],
+  "decision": "C",
+  "last_positive_purchase_interval_end": "2018-08-29 16:00:00",
+  "trailing_hours_without_purchases": 1174,
+  "sha256_protected_inputs": {
+    "reports\\parametros_calibrados.json": "a3d59cbec7b713d0ad7786ebd243473da83e2c45feec9134c4da06549966d9e9",
+    "reports\\modelo_seleccionado_desarrollo.json": "0ef089c77c816d409ef098d8327fd812b7641b9f946fa1bfc3496ed3ad091d21",
+    "reports\\metricas_entrenamiento.csv": "aab80215a2b850a96c26a8b3d61486cf6e736d208eb0bc94de21df3c598d0dda",
+    "reports\\metricas_transferencias_entrenamiento.csv": "489d312953ee3d99d673de30c1644ab9af62c54f35bf3846e25d00fb08aff7ae",
+    "reports\\calibracion_modelo.md": "e6efe56bcfb633e4ff9fdc75cfbe6aff038f1a356783b15de4baefd3a29b5d38",
+    "reports\\comparacion_modelos.md": "5148ace97695090f0260cc57050d54231f97402ffb6d0bef85f07273da66bc0e",
+    "docs\\modelo_matematico.md": "da5b342c21303c440fdc024e895ee9d8fed3b80b7012988d28231b46efdf6984",
+    "docs\\plan_calibracion_validacion.md": "917b1474e8f1c970e50aa693624d1f68828becb5731e7168ae8769a1fa213bd8",
+    "docs\\implementacion_rk4_agentpy.md": "e12d79bd1ded4b1db8b80929bb54e3bbfb860bcd25983ef7db4603850a39d892",
+    "src\\rk4_solver.py": "696fdb8182dc21b461b9155535c10dc97aeb52eb971caf0f949de175e75823ae",
+    "src\\simulation_engine.py": "b9ca1b066f3fd6a90ce630d3c0281d2b971b47750875c33e0b5706c53fdf401c",
+    "src\\agent_model.py": "f057be054ce7540ad504421c26b36d87734f3aa636a77b55f0330c7180bdd26c",
+    "src\\calibration_metrics.py": "e90bc955ad6018ab0a692f94cedf5b5318eebeded3def25693011d285b382e29",
+    "data\\processed\\eventos_por_hora.csv": "d2129b3ab9870023ae471f84e9557b7b4bbb8ce378b1b5301fd6453f21bbbff5",
+    "data\\processed\\niveles_reales_4_tanques.csv": "879f9d839fd3e0cfa1a8c3199a35d9697622b809ccd935e3505db6574c214eaf"
+  },
+  "sha256_new_code": {
+    "src\\validation.py": "4e1f7948b313c5ec4505ec9eb495e318f15b1fad570bd7993eace5df6ed40cd7",
+    "scripts\\validar_modelo.py": "6685f9198a5e1df9e69b5521fb3fe190a8b0b1bd2ee3348a285eacbb4fce273b"
+  },
+  "parameters_recalibrated": false,
+  "alternative_model_evaluated": false,
+  "final_validation_evaluated": true,
+  "independence_note": "Reserva usada sólo tras congelar estructura y parámetros; cohorte retrospectiva condicionada a entregas completas",
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "agentpy": "0.1.5"
+  },
+  "seconds_before_tests": 7.760406400000647,
+  "test_process_returncode": 0,
+  "test_output": "........................................................................ [ 72%]\n............................                                             [100%]\n100 passed in 11.07s\n",
+  "seconds_total": 19.556642600000487,
+  "protected_files_unchanged": true
+}

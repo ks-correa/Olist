@@ -1,0 +1,17 @@
+FASE 3: PRUEBAS MATEMÁTICAS ARTIFICIALES; SIN CALIBRACIÓN NI MÉTRICAS PREDICTIVAS
+Python 3.12.13; AgentPy 0.1.5; NumPy 2.5.4; SciPy 1.18.1; pandas 3.1.1
+................................................                         [100%]
+48 passed in 2.82s
+
+Lectura real (sin simular): inicio=2018-03-02 22:00:00, X0=[113.0, 586.0, 3005.0, 53963.0], total=57667.0, intervalos seleccionados=4
+Convergencia en caso artificial: h(horas), máximo error absoluto frente a expm (pedidos)
+h=0.2500: 5.30587038696e-05; error máximo conservación=2.84217094304e-14
+h=0.1250: 3.17547839757e-06; error máximo conservación=5.68434188608e-14
+h=0.0625: 1.94212901761e-07; error máximo conservación=1.13686837722e-13
+Diferencia entre mallas finas: max=2.98126549581e-06; NRMSE numérico por estado=[2.5647444123660743e-08, 2.8430974734159415e-08, 1.7449940540494617e-08, 7.981249080541948e-09]
+Factores de reducción de error: 16.708885, 16.350502
+AgentPy: 4 agentes; diferencia máxima estados=0; diferencia máxima transferencias=0 (igualdad exacta).
+Los casos inestable y estable con etapa interna negativa se rechazan en las pruebas; un paso menor permite avanzar.
+Rendimiento artificial: 18291 intervalos, 18292 estados, motor puro 2.763 s; error máximo conservación=9.47329681367e-09
+Rendimiento artificial AgentPy: 2.914 s; cuatro agentes; equivalencia exacta también en 18.291 intervalos.
+No se ejecutaron simulaciones históricas completas, calibración, validación estadística ni escenarios.

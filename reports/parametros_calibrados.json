@@ -1,0 +1,581 @@
+{
+  "phase": "4A",
+  "alpha": 0.10202378368368686,
+  "beta": 0.013240792867426554,
+  "gamma": 0.004071911987908591,
+  "units": "1/hora",
+  "interpretation": "coeficientes efectivos de modelo agregado; no capacidades físicas",
+  "period": {
+    "start": "2016-09-15 11:00:00",
+    "end": "2018-03-02 22:00:00",
+    "intervals": 12803
+  },
+  "initial_state": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "scales_pending": [
+    44.39279856283684,
+    330.3622588455831,
+    1004.1355932203389
+  ],
+  "training_array_sha256": "183665947f0d1b922a08350995a8db22edaa17663bbeb6a83f681f272de9e676",
+  "code_sha256": {
+    "src\\calibration.py": "b9b111673ca4c5a64ff398e2559b121b0d825095c60389a8ab3feb8cde7db7c3",
+    "src\\calibration_metrics.py": "e90bc955ad6018ab0a692f94cedf5b5318eebeded3def25693011d285b382e29",
+    "src\\rk4_solver.py": "7409f0f65878c9d1be6dcef2c8609a85d9ae53fb691340ef68929f6a0729a39f",
+    "src\\simulation_engine.py": "fc4479a8cf675b39133c227437281c6ea5fe8ead75ddbc4ad741a1660d4192e2",
+    "src\\agent_model.py": "7837327938c6bfad544f8a9fbe3e996d5548b929a2b832f66a1d39b18e5724e8",
+    "scripts\\calibrar_modelo.py": "5194a76b531666b27c71355fe0ed8c8d753de470e29fe57c282455f0a087fddc"
+  },
+  "method": "scipy.optimize.least_squares TRF; trayectoria expm de mismas EDO; RK4 y AgentPy para reproducción definitiva",
+  "optimizer_configuration": {
+    "bounds": [
+      0,
+      "Infinity"
+    ],
+    "jac": "3-point",
+    "x_scale": "jac",
+    "loss": "linear",
+    "ftol": 1e-10,
+    "xtol": 1e-10,
+    "gtol": 1e-10,
+    "max_nfev": 200,
+    "initial_factors": [
+      0.5,
+      1,
+      2
+    ]
+  },
+  "preliminary_exposure": [
+    {
+      "parametro": "alpha",
+      "transferencias": 57554,
+      "exposicion_pedidos_hora": 568846.97,
+      "pendientes_al_corte": 113,
+      "tasa_inicial": 0.10117659587779822
+    },
+    {
+      "parametro": "beta",
+      "transferencias": 56968,
+      "exposicion_pedidos_hora": 4229523.512222222,
+      "pendientes_al_corte": 586,
+      "tasa_inicial": 0.013469129521417083
+    },
+    {
+      "parametro": "gamma",
+      "transferencias": 53963,
+      "exposicion_pedidos_hora": 12854546.371666666,
+      "pendientes_al_corte": 3005,
+      "tasa_inicial": 0.00419796999752107
+    }
+  ],
+  "selected_optimizer": {
+    "initial": [
+      0.05058829793889911,
+      0.0067345647607085415,
+      0.002098984998760535
+    ],
+    "parameters": [
+      0.10202378368368686,
+      0.013240792867426554,
+      0.004071911987908591
+    ],
+    "units": "1/hora",
+    "cost_half_sse": 2473.2889828044963,
+    "mean_normalized_squared_error": 0.1287869500796426,
+    "nfev": 7,
+    "njev": 7,
+    "actual_residual_calls": 49,
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "optimality": 0.0013871383761277806,
+    "active_mask": [
+      0,
+      0,
+      0
+    ],
+    "seconds": 0.04656560000148602,
+    "scaled_jacobian_singular_values": [
+      147.06677249421668,
+      143.40276761393494,
+      141.7007250254609
+    ],
+    "scaled_jacobian_condition": 1.0378688780018,
+    "initial_factor": 0.5
+  },
+  "all_training_runs": [
+    {
+      "initial": [
+        0.05058829793889911,
+        0.0067345647607085415,
+        0.002098984998760535
+      ],
+      "parameters": [
+        0.10202378368368686,
+        0.013240792867426554,
+        0.004071911987908591
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 2473.2889828044963,
+      "mean_normalized_squared_error": 0.1287869500796426,
+      "nfev": 7,
+      "njev": 7,
+      "actual_residual_calls": 49,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.0013871383761277806,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.04656560000148602,
+      "scaled_jacobian_singular_values": [
+        147.06677249421668,
+        143.40276761393494,
+        141.7007250254609
+      ],
+      "scaled_jacobian_condition": 1.0378688780018,
+      "initial_factor": 0.5
+    },
+    {
+      "initial": [
+        0.10117659587779822,
+        0.013469129521417083,
+        0.00419796999752107
+      ],
+      "parameters": [
+        0.10202378305015972,
+        0.0132407928618342,
+        0.004071911987860411
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 2473.2889828044977,
+      "mean_normalized_squared_error": 0.1287869500796427,
+      "nfev": 4,
+      "njev": 4,
+      "actual_residual_calls": 28,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.0026910379862223523,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.022792499999923166,
+      "scaled_jacobian_singular_values": [
+        147.06677337663535,
+        143.40276766439658,
+        141.7007250308869
+      ],
+      "scaled_jacobian_condition": 1.0378688841893984,
+      "initial_factor": 1.0
+    },
+    {
+      "initial": [
+        0.20235319175559643,
+        0.026938259042834166,
+        0.00839593999504214
+      ],
+      "parameters": [
+        0.10202378641147901,
+        0.013240792869933363,
+        0.004071911989678579
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 2473.2889828045004,
+      "mean_normalized_squared_error": 0.1287869500796428,
+      "nfev": 5,
+      "njev": 5,
+      "actual_residual_calls": 35,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.0004312349824237132,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.02728969999952824,
+      "scaled_jacobian_singular_values": [
+        147.06676869217668,
+        143.40276758891764,
+        141.70072497723564
+      ],
+      "scaled_jacobian_condition": 1.037868851523541,
+      "initial_factor": 2.0
+    }
+  ],
+  "internal": {
+    "split": "2017-11-16 05:00:00",
+    "fit_intervals": 10242,
+    "evaluation_intervals": 2561,
+    "evaluation_propagator": "RK4, h=0.25 horas",
+    "prefix_fit": {
+      "initial": [
+        0.051970205315146886,
+        0.007024910179110958,
+        0.002335323683521241
+      ],
+      "parameters": [
+        0.10567057353864172,
+        0.014630989706833755,
+        0.004756758435619084
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 1814.0010705625223,
+      "mean_normalized_squared_error": 0.11807596631924248,
+      "nfev": 7,
+      "njev": 7,
+      "actual_residual_calls": 49,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.001157363143818202,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.031049899997015018,
+      "scaled_jacobian_singular_values": [
+        124.41574921573633,
+        121.04582357505721,
+        119.50438866694661
+      ],
+      "scaled_jacobian_condition": 1.0410977421296004,
+      "initial_factor": 0.5
+    },
+    "prefix_runs": [
+      {
+        "initial": [
+          0.051970205315146886,
+          0.007024910179110958,
+          0.002335323683521241
+        ],
+        "parameters": [
+          0.10567057353864172,
+          0.014630989706833755,
+          0.004756758435619084
+        ],
+        "units": "1/hora",
+        "cost_half_sse": 1814.0010705625223,
+        "mean_normalized_squared_error": 0.11807596631924248,
+        "nfev": 7,
+        "njev": 7,
+        "actual_residual_calls": 49,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "optimality": 0.001157363143818202,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "seconds": 0.031049899997015018,
+        "scaled_jacobian_singular_values": [
+          124.41574921573633,
+          121.04582357505721,
+          119.50438866694661
+        ],
+        "scaled_jacobian_condition": 1.0410977421296004,
+        "initial_factor": 0.5
+      },
+      {
+        "initial": [
+          0.10394041063029377,
+          0.014049820358221917,
+          0.004670647367042482
+        ],
+        "parameters": [
+          0.10567057350886974,
+          0.0146309897207616,
+          0.0047567584353105374
+        ],
+        "units": "1/hora",
+        "cost_half_sse": 1814.0010705625223,
+        "mean_normalized_squared_error": 0.11807596631924248,
+        "nfev": 5,
+        "njev": 5,
+        "actual_residual_calls": 35,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "optimality": 0.0002285823282193178,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "seconds": 0.02072319999933825,
+        "scaled_jacobian_singular_values": [
+          124.41574925100042,
+          121.04582356949825,
+          119.50438856901641
+        ],
+        "scaled_jacobian_condition": 1.0410977432778343,
+        "initial_factor": 1.0
+      },
+      {
+        "initial": [
+          0.20788082126058754,
+          0.028099640716443833,
+          0.009341294734084965
+        ],
+        "parameters": [
+          0.10567057315219823,
+          0.014630989744948584,
+          0.004756758434356593
+        ],
+        "units": "1/hora",
+        "cost_half_sse": 1814.0010705625223,
+        "mean_normalized_squared_error": 0.1180759663192425,
+        "nfev": 5,
+        "njev": 5,
+        "actual_residual_calls": 35,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "optimality": 0.0005732495250043712,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "seconds": 0.02112920000217855,
+        "scaled_jacobian_singular_values": [
+          124.4157496605776,
+          121.04582356814105,
+          119.50438840021927
+        ],
+        "scaled_jacobian_condition": 1.041097748175659,
+        "initial_factor": 2.0
+      }
+    ],
+    "posterior_diagnostic_refit": {
+      "initial": [
+        0.19535445934204182,
+        0.02555806740466041,
+        0.0073816186214363845
+      ],
+      "parameters": [
+        0.0999824583170429,
+        0.012549079826718958,
+        0.0036561854036413397
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 279.4870123578325,
+      "mean_normalized_squared_error": 0.07275465634721659,
+      "nfev": 6,
+      "njev": 6,
+      "actual_residual_calls": 42,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 9.390911899544216e-06,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.01073799999721814,
+      "scaled_jacobian_singular_values": [
+        53.788256029344495,
+        51.266860960059624,
+        47.072455963821504
+      ],
+      "scaled_jacobian_condition": 1.1426694215973043,
+      "initial_factor": 2.0
+    },
+    "posterior_runs": [
+      {
+        "initial": [
+          0.048838614835510455,
+          0.006389516851165102,
+          0.0018454046553590961
+        ],
+        "parameters": [
+          0.09998245196258589,
+          0.0125490798327877,
+          0.003656185401176462
+        ],
+        "units": "1/hora",
+        "cost_half_sse": 279.48701235783784,
+        "mean_normalized_squared_error": 0.07275465634721796,
+        "nfev": 7,
+        "njev": 7,
+        "actual_residual_calls": 49,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "optimality": 0.0017102256814571781,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "seconds": 0.013355299997783732,
+        "scaled_jacobian_singular_values": [
+          53.78825930425966,
+          51.266860924240305,
+          47.07245597806287
+        ],
+        "scaled_jacobian_condition": 1.1426694908233925,
+        "initial_factor": 0.5
+      },
+      {
+        "initial": [
+          0.09767722967102091,
+          0.012779033702330205,
+          0.0036908093107181923
+        ],
+        "parameters": [
+          0.0999824573045438,
+          0.012549079827619457,
+          0.0036561854032530587
+        ],
+        "units": "1/hora",
+        "cost_half_sse": 279.48701235783255,
+        "mean_normalized_squared_error": 0.07275465634721662,
+        "nfev": 5,
+        "njev": 5,
+        "actual_residual_calls": 35,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "optimality": 0.00019354871560750553,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "seconds": 0.009563099996739766,
+        "scaled_jacobian_singular_values": [
+          53.788256551006455,
+          51.26686095466884,
+          47.07245596604763
+        ],
+        "scaled_jacobian_condition": 1.1426694326253721,
+        "initial_factor": 1.0
+      },
+      {
+        "initial": [
+          0.19535445934204182,
+          0.02555806740466041,
+          0.0073816186214363845
+        ],
+        "parameters": [
+          0.0999824583170429,
+          0.012549079826718958,
+          0.0036561854036413397
+        ],
+        "units": "1/hora",
+        "cost_half_sse": 279.4870123578325,
+        "mean_normalized_squared_error": 0.07275465634721659,
+        "nfev": 6,
+        "njev": 6,
+        "actual_residual_calls": 42,
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "optimality": 9.390911899544216e-06,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "seconds": 0.01073799999721814,
+        "scaled_jacobian_singular_values": [
+          53.788256029344495,
+          51.266860960059624,
+          47.072455963821504
+        ],
+        "scaled_jacobian_condition": 1.1426694215973043,
+        "initial_factor": 2.0
+      }
+    ]
+  },
+  "numeric": [
+    {
+      "subpasos": 4,
+      "h_horas": 0.25,
+      "segundos": 1.9774957000008726,
+      "error_maximo_vs_analitico": 7.489304607588565e-07,
+      "error_maximo_conservacion": 1.7462298274040222e-10,
+      "minimo_estado": 0.0,
+      "minimo_transferencia": 0.0,
+      "X4_no_decreciente": true,
+      "NRMSE_numerico_maximo": 1.0992555215423164e-09
+    },
+    {
+      "subpasos": 8,
+      "h_horas": 0.125,
+      "segundos": 3.6654727999994066,
+      "error_maximo_vs_analitico": 4.631169758795295e-08,
+      "error_maximo_conservacion": 3.637978807091713e-10,
+      "minimo_estado": 0.0,
+      "minimo_transferencia": 0.0,
+      "X4_no_decreciente": true,
+      "NRMSE_numerico_maximo": 6.797688115453988e-11
+    },
+    {
+      "subpasos": 16,
+      "h_horas": 0.0625,
+      "segundos": 7.433254800002032,
+      "error_maximo_vs_analitico": 2.8765043680323288e-09,
+      "error_maximo_conservacion": 5.093170329928398e-10,
+      "minimo_estado": 0.0,
+      "minimo_transferencia": 0.0,
+      "X4_no_decreciente": true,
+      "NRMSE_numerico_maximo": 4.226069331075029e-12
+    }
+  ],
+  "grid_comparisons": [
+    {
+      "h_grueso": 0.25,
+      "h_fino": 0.125,
+      "max_diferencia": 7.026187631709035e-07,
+      "NRMSE_por_estado": [
+        1.0312786403897093e-09,
+        1.5921246164365302e-10,
+        7.06649179594023e-12,
+        1.8445993220729322e-14
+      ],
+      "max_diferencia_transferencias": 1.727592433553582e-07
+    },
+    {
+      "h_grueso": 0.125,
+      "h_fino": 0.0625,
+      "max_diferencia": 4.343519321992062e-08,
+      "NRMSE_por_estado": [
+        6.375081187017843e-11,
+        9.841996720674023e-12,
+        4.3690171092518313e-13,
+        7.155631460865617e-15
+      ],
+      "max_diferencia_transferencias": 1.0679542583602597e-08
+    }
+  ],
+  "recommended_substeps": 4,
+  "recommended_h_hours": 0.25,
+  "agentpy_states_exact": true,
+  "agentpy_transfers_exact": true,
+  "final_validation_evaluated": false,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.1.1",
+    "agentpy": "0.1.5"
+  },
+  "total_seconds": 18.01868630000172
+}

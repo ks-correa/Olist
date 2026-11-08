@@ -1,0 +1,186 @@
+{
+  "model": "base",
+  "parameters": [
+    0.10202378368368686,
+    0.013240792867426554,
+    0.004071911987908591
+  ],
+  "units": [
+    "1/hora",
+    "1/hora",
+    "1/hora"
+  ],
+  "period": {
+    "start": "2016-09-15 11:00:00",
+    "end": "2018-03-02 22:00:00",
+    "intervals": 12803
+  },
+  "optimizer": {
+    "initial": [
+      0.05058829793889911,
+      0.0067345647607085415,
+      0.002098984998760535
+    ],
+    "parameters": [
+      0.10202378368368686,
+      0.013240792867426554,
+      0.004071911987908591
+    ],
+    "units": "1/hora",
+    "cost_half_sse": 2473.2889828044963,
+    "mean_normalized_squared_error": 0.1287869500796426,
+    "nfev": 7,
+    "njev": 7,
+    "actual_residual_calls": 49,
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "optimality": 0.0013871383761277806,
+    "active_mask": [
+      0,
+      0,
+      0
+    ],
+    "seconds": 0.03535099999862723,
+    "scaled_jacobian_singular_values": [
+      147.06677249421668,
+      143.40276761393494,
+      141.7007250254609
+    ],
+    "scaled_jacobian_condition": 1.0378688780018,
+    "initial_factor": 0.5
+  },
+  "all_starts": [
+    {
+      "initial": [
+        0.05058829793889911,
+        0.0067345647607085415,
+        0.002098984998760535
+      ],
+      "parameters": [
+        0.10202378368368686,
+        0.013240792867426554,
+        0.004071911987908591
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 2473.2889828044963,
+      "mean_normalized_squared_error": 0.1287869500796426,
+      "nfev": 7,
+      "njev": 7,
+      "actual_residual_calls": 49,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.0013871383761277806,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.03535099999862723,
+      "scaled_jacobian_singular_values": [
+        147.06677249421668,
+        143.40276761393494,
+        141.7007250254609
+      ],
+      "scaled_jacobian_condition": 1.0378688780018,
+      "initial_factor": 0.5
+    },
+    {
+      "initial": [
+        0.10117659587779822,
+        0.013469129521417083,
+        0.00419796999752107
+      ],
+      "parameters": [
+        0.10202378305015972,
+        0.0132407928618342,
+        0.004071911987860411
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 2473.2889828044977,
+      "mean_normalized_squared_error": 0.1287869500796427,
+      "nfev": 4,
+      "njev": 4,
+      "actual_residual_calls": 28,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.0026910379862223523,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.020115999999688938,
+      "scaled_jacobian_singular_values": [
+        147.06677337663535,
+        143.40276766439658,
+        141.7007250308869
+      ],
+      "scaled_jacobian_condition": 1.0378688841893984,
+      "initial_factor": 1.0
+    },
+    {
+      "initial": [
+        0.20235319175559643,
+        0.026938259042834166,
+        0.00839593999504214
+      ],
+      "parameters": [
+        0.10202378641147901,
+        0.013240792869933363,
+        0.004071911989678579
+      ],
+      "units": "1/hora",
+      "cost_half_sse": 2473.2889828045004,
+      "mean_normalized_squared_error": 0.1287869500796428,
+      "nfev": 5,
+      "njev": 5,
+      "actual_residual_calls": 35,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "optimality": 0.0004312349824237132,
+      "active_mask": [
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.02452640000046813,
+      "scaled_jacobian_singular_values": [
+        147.06676869217668,
+        143.40276758891764,
+        141.70072497723564
+      ],
+      "scaled_jacobian_condition": 1.037868851523541,
+      "initial_factor": 2.0
+    }
+  ],
+  "selection": {
+    "checks": {
+      "median_X1_improvement_at_least_15": false,
+      "no_X2_X3_deterioration_above_10_any_window": true,
+      "numerical_checks": true,
+      "optimizers_converged": true,
+      "p_range_at_most_020": true,
+      "rate_ratios_at_most_2": true,
+      "no_p_near_one": true,
+      "local_condition_below_1000": true,
+      "alpha_p_sensitivity_cosine_below_098": false
+    },
+    "selected_model": "base",
+    "median_X1_improvement_percent": 0.5401014280410121,
+    "minimum_X2_X3_improvement_percent": [
+      -0.08269019500317665,
+      -0.013870198431553682
+    ],
+    "p_range": 0.19557745765599296,
+    "rate_max_min_ratios": [
+      1.2033326725954556,
+      1.1155970711747356,
+      1.047213580613083
+    ]
+  },
+  "final_validation_evaluated": false
+}

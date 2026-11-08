@@ -1,0 +1,11 @@
+FASE 6 - Streamlit
+Python 3.12.13; Streamlit 1.67.0; Plotly 7.1.0; AgentPy 0.1.5
+
+........................................................................ [ 49%]
+........................................................................ [ 98%]
+..                                                                       [100%]
+146 passed in 14.06s
+
+Type check: uvx ty check app.py app_pages ui src/dashboard_data.py src/dashboard_metrics.py --python .venv/Scripts/python.exe -> All checks passed.
+API real Streamlit en 127.0.0.1:8765: cinco paginas ready; avance horario, final 5488, reinicio, cambio a enero, E2, modo personalizado y ejecucion: ready.
+Navegador: cua.getState() devuelve apps=[] y browsers=[]. Sin inspeccion visual; lista manual en docs/guia_uso_streamlit.md.

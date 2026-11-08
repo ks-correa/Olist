@@ -1,0 +1,7 @@
+periodo,variable,NMAE_menor_020,NRMSE_menor_030,pico_error_menor_20pct,error_final_menor_20pct_escala
+entrenamiento_total,X1,False,False,True,False
+entrenamiento_total,X2,False,False,False,False
+entrenamiento_total,X3,True,True,True,False
+evaluacion_interna,X1,False,False,True,False
+evaluacion_interna,X2,False,False,False,False
+evaluacion_interna,X3,False,False,True,False
