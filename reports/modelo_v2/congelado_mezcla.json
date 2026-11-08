@@ -1,0 +1,34 @@
+{
+  "modelo": "M",
+  "selected_overall": "B",
+  "theta": [
+    -1.8849563889357073,
+    -4.299053302757425,
+    2.9099395160834702,
+    -4.324522131238018,
+    -4.3270881857810215,
+    1.7676441346860627,
+    -5.5036553483698345,
+    -5.503716913401153,
+    -1.251718024705573
+  ],
+  "scores": {
+    "A": 1.2778732132943702,
+    "B": 1.2492194266816345,
+    "C": 1.3113352777012948,
+    "M": 1.2796242236611834
+  },
+  "scales": [
+    44.39279856283684,
+    330.3622588455831,
+    1004.1355932203389
+  ],
+  "fecha_utc": "2026-11-08T13:18:33.893612+00:00",
+  "protocolo_sha256": "3e3ed46927a2d0f148f28b3c99f50e372563cb6349a6987d1afd1ac6ea520798",
+  "source_hashes": {
+    "src/model_mixture.py": "13d4d223b4eec784c4869342d7c1b4a0987ba92e626ca674ffc45112d35c257a",
+    "src/calibration_mixture.py": "4e01674e51d86b483d367a32fe557d83f5b608ce77e1a561f7188b82ebc164d5",
+    "scripts/experimentar_mezcla_v2.py": "1c37f872ff6b29f1cbf21a8e72b20007c07bf8e94843975981d18d0fc137a1df"
+  },
+  "scope": "selecci\u00f3n adaptativa de desarrollo; reserva antigua ya observada"
+}

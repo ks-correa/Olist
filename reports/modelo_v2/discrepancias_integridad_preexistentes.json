@@ -1,0 +1,9 @@
+[
+  {
+    "path": "data/processed/pedidos_limpios.csv",
+    "historico": "138dc6efb6b028321aa49c8b606ccc1789cd276a53c30794cdfce81c83e4ba46",
+    "inicio_tarea": "b1f9244029f850affbafb7ea95450ec9ab5cd361face59b07242f29f873164d4",
+    "actual": "b1f9244029f850affbafb7ea95450ec9ab5cd361face59b07242f29f873164d4",
+    "preexistente": true
+  }
+]

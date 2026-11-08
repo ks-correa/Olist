@@ -1,0 +1,36 @@
+{
+  "directorio_repeticion": "C:\\Users\\User\\AppData\\Local\\Temp\\olist_v2_reproduccion_20261108",
+  "archivos": [
+    {
+      "archivo": "metricas_ventanas.csv",
+      "identico_byte_a_byte": true,
+      "sha256": "39582a33b4394ab73959e703ce948c48de94c3cb16154d183e929e79d4c70617"
+    },
+    {
+      "archivo": "comparacion_final.csv",
+      "identico_byte_a_byte": true,
+      "sha256": "9378ce2872051f63dd4728f8fc20336f8b1ade1e91c35302b2cf015164941781"
+    },
+    {
+      "archivo": "metricas_ventanas_ampliadas.csv",
+      "identico_byte_a_byte": true,
+      "sha256": "826120f0bf8d40e4359b705d76ea0d8a10bafc7b0ce7ef89c9e72ae3fd7e5da2"
+    },
+    {
+      "archivo": "comparacion_ampliada.csv",
+      "identico_byte_a_byte": true,
+      "sha256": "fe6578ab8a12a42c3c7698545a0c53f10cc7748803a6db38ab551cee6822bba9"
+    },
+    {
+      "archivo": "sensibilidad_agregacion_15min.csv",
+      "identico_byte_a_byte": true,
+      "sha256": "f69a9d5eda9f780fc05f83730bce441d0310db78bdc4c9c23fea4227d2ccc1a0"
+    },
+    {
+      "archivo": "distancias_permanencia.csv",
+      "identico_byte_a_byte": true,
+      "sha256": "355435cbebbf867a01277c995771c7177cf45cb65395a8320feee2665b16cb84"
+    }
+  ],
+  "seleccion_repetida": "B"
+}

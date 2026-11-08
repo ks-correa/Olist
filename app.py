@@ -24,6 +24,7 @@ page=st.navigation([
     st.Page('app_pages/scenarios_view.py',title='Escenarios',icon=':material/compare_arrows:',url_path='escenarios'),
     st.Page('app_pages/validation_view.py',title='Datos y validación',icon=':material/analytics:',url_path='validacion'),
     st.Page('app_pages/methodology.py',title='Metodología',icon=':material/functions:',url_path='metodologia'),
+    st.Page('app_pages/model_v2_view.py',title='Laboratorio V2',icon=':material/science:',url_path='modelo-v2'),
 ],position='top')
 p=st.session_state.player
 p.context(st.session_state.window,st.session_state.scenario)

@@ -1,0 +1,2053 @@
+{
+  "schema_version": 1,
+  "session_id": "s_06249bbceb5659d594b5a14723c7ebe2",
+  "status": "ready",
+  "observed_at": "2026-11-08T13:22:06Z",
+  "page": {
+    "url_path": "modelo-v2",
+    "title": "Laboratorio V2",
+    "icon": ":material/science:"
+  },
+  "pages": [
+    {
+      "url_path": "",
+      "title": "Vista general",
+      "icon": ":material/dashboard:"
+    },
+    {
+      "url_path": "simulacion",
+      "title": "Simulación",
+      "icon": ":material/play_circle:"
+    },
+    {
+      "url_path": "escenarios",
+      "title": "Escenarios",
+      "icon": ":material/compare_arrows:"
+    },
+    {
+      "url_path": "validacion",
+      "title": "Datos y validación",
+      "icon": ":material/analytics:"
+    },
+    {
+      "url_path": "metodologia",
+      "title": "Metodología",
+      "icon": ":material/functions:"
+    },
+    {
+      "url_path": "modelo-v2",
+      "title": "Laboratorio V2",
+      "icon": ":material/science:"
+    }
+  ],
+  "query_params": {},
+  "tree": {
+    "type": "root",
+    "children": [
+      {
+        "type": "main",
+        "children": [
+          {
+            "type": "subheader",
+            "props": {
+              "body": "Laboratorio V2 · comparación reproducible"
+            }
+          },
+          {
+            "type": "segmented_control",
+            "key": "v2_version",
+            "props": {
+              "label": "Versión del modelo",
+              "options": [
+                "Modelo original V1",
+                "Modelo experimental V2"
+              ],
+              "selection_mode": "single",
+              "required": true,
+              "disabled": false,
+              "label_visibility": "visible",
+              "on_change": "rerun"
+            },
+            "value_schema": {
+              "type": "string"
+            },
+            "value": "Modelo experimental V2"
+          },
+          {
+            "type": "segmented_control",
+            "key": "v2_scope",
+            "props": {
+              "label": "Período",
+              "options": [
+                "Reserva histórica reutilizada",
+                "Entrenamiento"
+              ],
+              "selection_mode": "single",
+              "required": true,
+              "disabled": false,
+              "label_visibility": "visible",
+              "on_change": "rerun"
+            },
+            "value_schema": {
+              "type": "string"
+            },
+            "value": "Reserva histórica reutilizada"
+          },
+          {
+            "type": "warning",
+            "props": {
+              "body": "Ningún candidato alcanzó NRMSE ≤ 0,30 simultáneamente en X1, X2 y X3. No hay una evaluación nueva independiente. V2 sigue siendo experimental."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "La selección utiliza desarrollo cronológico reutilizado. Las compras históricas son entradas conocidas: estos resultados no evalúan un pronóstico de demanda."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "V2_B · Reserva histórica reutilizada · 2018-03-02 22:00:00 a 2018-10-17 14:00:00 · 5488 intervalos de una hora"
+            }
+          },
+          {
+            "type": "dataframe",
+            "props": {
+              "hide_index": true,
+              "alt": "Métricas por depósito, errores en pedidos y normalizados adimensionales"
+            },
+            "data": {
+              "columns": [
+                {
+                  "name": "variable",
+                  "type": "large_string"
+                },
+                {
+                  "name": "MAE",
+                  "type": "double"
+                },
+                {
+                  "name": "RMSE",
+                  "type": "double"
+                },
+                {
+                  "name": "NRMSE",
+                  "type": "double"
+                },
+                {
+                  "name": "NMAE",
+                  "type": "double"
+                },
+                {
+                  "name": "R2",
+                  "type": "double"
+                },
+                {
+                  "name": "sesgo_medio",
+                  "type": "double"
+                },
+                {
+                  "name": "error_nivel_maximo_absoluto",
+                  "type": "double"
+                },
+                {
+                  "name": "error_final_absoluto",
+                  "type": "double"
+                },
+                {
+                  "name": "cumple",
+                  "type": "bool"
+                }
+              ],
+              "row_count": 3,
+              "column_count": 10,
+              "complete": true,
+              "preview": {
+                "rows": [
+                  [
+                    "X1",
+                    23.459994362966306,
+                    43.18108248131743,
+                    0.9727046701098546,
+                    0.5284639653830182,
+                    0.43567254434648794,
+                    3.779042565437801,
+                    394.60593444164255,
+                    1.264496463963919e-51,
+                    false
+                  ],
+                  [
+                    "X2",
+                    127.80140774791269,
+                    169.14097351315655,
+                    0.5119863694606105,
+                    0.3868523244589184,
+                    0.5941870823731669,
+                    109.26393224235095,
+                    69.54047662108451,
+                    4.929299721779185e-05,
+                    false
+                  ],
+                  [
+                    "X3",
+                    546.364664252969,
+                    667.5369628480643,
+                    0.6647876714610053,
+                    0.5441144283121526,
+                    0.5882500583137574,
+                    287.3322494730745,
+                    418.8619004681623,
+                    20.69716595572754,
+                    false
+                  ]
+                ]
+              },
+              "url": "../../media/c8c2e0579dec2cd429b0de519fcb66cf"
+            }
+          },
+          {
+            "type": "latex",
+            "props": {
+              "body": "\\dot X_1=\\lambda-q_{12},\\quad\\dot X_2=q_{12}-q_{23},\\quad\\dot X_3=q_{23}-q_{34},\\quad\\dot X_4=q_{34}"
+            }
+          },
+          {
+            "type": "latex",
+            "props": {
+              "body": "q_{12}=\\alpha(t)X_1,\\quad q_{23}=\\beta(t)X_2,\\quad q_{34}=\\gamma(t)X_3"
+            }
+          },
+          {
+            "type": "latex",
+            "props": {
+              "body": "k_i(t)=\\exp[b_{i0}+b_{i1}\\sin(2\\pi h/24)+b_{i2}\\cos(2\\pi h/24)+b_{i3}I_{fin\\ de\\ semana}]"
+            }
+          },
+          {
+            "type": "dataframe",
+            "props": {
+              "alt": "Coeficientes congelados del modelo B"
+            },
+            "data": {
+              "columns": [
+                {
+                  "name": "log tasa base",
+                  "type": "double"
+                },
+                {
+                  "name": "seno diario",
+                  "type": "double"
+                },
+                {
+                  "name": "coseno diario",
+                  "type": "double"
+                },
+                {
+                  "name": "fin de semana",
+                  "type": "double"
+                },
+                {
+                  "name": "__index_level_0__",
+                  "type": "large_string"
+                }
+              ],
+              "row_count": 3,
+              "column_count": 5,
+              "complete": true,
+              "preview": {
+                "rows": [
+                  [
+                    -2.256077057644848,
+                    -0.09982595253010038,
+                    -0.19038134529757397,
+                    -0.14576862484530523,
+                    "α"
+                  ],
+                  [
+                    -4.200555157626661,
+                    -0.1151252650987986,
+                    0.007750092132629819,
+                    -0.5373619501238437,
+                    "β"
+                  ],
+                  [
+                    -5.502906192571041,
+                    -0.0006768912538543141,
+                    -0.0005132317414777678,
+                    -0.0016621007858674576,
+                    "γ"
+                  ]
+                ]
+              },
+              "url": "../../media/6c88181d1d552de08aa3413416408efb"
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Tasas en h⁻¹, constantes por intervalo horario. Cuatro EDO; RK4 h=0,25 h. Los efectos de calendario son adimensionales."
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "#### Cuatro depósitos en el tiempo"
+            }
+          },
+          {
+            "type": "slider",
+            "key": "v2_hour",
+            "props": {
+              "label": "Hora desde el origen",
+              "min_value": 0,
+              "max_value": 5488,
+              "step": 1,
+              "format": "%d",
+              "disabled": false,
+              "label_visibility": "visible",
+              "on_change": "rerun"
+            },
+            "value_schema": {
+              "type": "integer"
+            },
+            "value": 0
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Instante: 2018-03-02 22:00:00 · V2_B · Reserva histórica reutilizada"
+            }
+          },
+          {
+            "type": "container",
+            "children": [
+              {
+                "type": "metric",
+                "props": {
+                  "label": "X1 · aprobación",
+                  "value": "113.00",
+                  "label_visibility": "visible"
+                }
+              },
+              {
+                "type": "metric",
+                "props": {
+                  "label": "X2 · despacho",
+                  "value": "586.00",
+                  "label_visibility": "visible"
+                }
+              },
+              {
+                "type": "metric",
+                "props": {
+                  "label": "X3 · entrega",
+                  "value": "3,005.00",
+                  "label_visibility": "visible"
+                }
+              },
+              {
+                "type": "metric",
+                "props": {
+                  "label": "X4 · entregados acumulados",
+                  "value": "53,963.00",
+                  "label_visibility": "visible"
+                }
+              }
+            ]
+          },
+          {
+            "type": "bar_chart",
+            "props": {
+              "alt": "Niveles de los cuatro depósitos en la hora seleccionada",
+              "horizontal": false,
+              "sort": true
+            },
+            "data": {
+              "columns": [
+                {
+                  "name": "index -- streamlit-generated",
+                  "type": "large_string"
+                },
+                {
+                  "name": "Pedidos simulados",
+                  "type": "double"
+                }
+              ],
+              "row_count": 4,
+              "column_count": 2,
+              "complete": true,
+              "preview": {
+                "rows": [
+                  [
+                    "X1",
+                    113.0
+                  ],
+                  [
+                    "X2",
+                    586.0
+                  ],
+                  [
+                    "X3",
+                    3005.0
+                  ],
+                  [
+                    "X4",
+                    53963.0
+                  ]
+                ]
+              },
+              "url": "../../media/30c298aa34411875291a25dd95653b9a",
+              "spec": {
+                "data": {
+                  "name": "77e942b89b186ac4f0e39db2711c42a5"
+                },
+                "mark": {
+                  "type": "bar"
+                },
+                "encoding": {
+                  "tooltip": [
+                    {
+                      "field": "index -- streamlit-generated",
+                      "title": "index",
+                      "type": "nominal"
+                    },
+                    {
+                      "field": "Pedidos simulados",
+                      "type": "quantitative"
+                    }
+                  ],
+                  "x": {
+                    "axis": {
+                      "grid": false
+                    },
+                    "field": "index -- streamlit-generated",
+                    "scale": {},
+                    "title": "",
+                    "type": "ordinal"
+                  },
+                  "y": {
+                    "axis": {
+                      "grid": true
+                    },
+                    "field": "Pedidos simulados",
+                    "scale": {},
+                    "title": "",
+                    "type": "quantitative"
+                  }
+                },
+                "params": [
+                  {
+                    "name": "param_1",
+                    "select": {
+                      "type": "interval",
+                      "encodings": [
+                        "x",
+                        "y"
+                      ]
+                    },
+                    "bind": "scales"
+                  }
+                ],
+                "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+                "autosize": {
+                  "type": "fit",
+                  "contains": "padding"
+                }
+              }
+            }
+          },
+          {
+            "type": "segmented_control",
+            "key": "v2_stage",
+            "props": {
+              "label": "Etapa",
+              "options": [
+                "X1",
+                "X2",
+                "X3",
+                "X4"
+              ],
+              "selection_mode": "single",
+              "required": true,
+              "disabled": false,
+              "label_visibility": "visible",
+              "on_change": "rerun"
+            },
+            "value_schema": {
+              "type": "string"
+            },
+            "value": "X1"
+          },
+          {
+            "type": "line_chart",
+            "props": {
+              "alt": "X1 observado frente a simulado, período completo sin suavizado"
+            },
+            "data": {
+              "columns": [
+                {
+                  "name": "fecha",
+                  "type": "timestamp[us]"
+                },
+                {
+                  "name": "color -- streamlit-generated",
+                  "type": "large_string"
+                },
+                {
+                  "name": "value -- streamlit-generated",
+                  "type": "double"
+                }
+              ],
+              "row_count": 10978,
+              "column_count": 3,
+              "complete": false,
+              "preview": {
+                "rows": [
+                  [
+                    "2018-03-02T22:00:00",
+                    "Observado (pedidos)",
+                    113.0
+                  ],
+                  [
+                    "2018-03-02T23:00:00",
+                    "Observado (pedidos)",
+                    109.0
+                  ],
+                  [
+                    "2018-03-03T00:00:00",
+                    "Observado (pedidos)",
+                    111.0
+                  ],
+                  [
+                    "2018-03-03T01:00:00",
+                    "Observado (pedidos)",
+                    110.0
+                  ],
+                  [
+                    "2018-03-03T02:00:00",
+                    "Observado (pedidos)",
+                    110.0
+                  ],
+                  [
+                    "2018-03-03T03:00:00",
+                    "Observado (pedidos)",
+                    47.0
+                  ],
+                  [
+                    "2018-03-03T04:00:00",
+                    "Observado (pedidos)",
+                    38.0
+                  ],
+                  [
+                    "2018-03-03T05:00:00",
+                    "Observado (pedidos)",
+                    38.0
+                  ],
+                  [
+                    "2018-03-03T06:00:00",
+                    "Observado (pedidos)",
+                    38.0
+                  ],
+                  [
+                    "2018-03-03T07:00:00",
+                    "Observado (pedidos)",
+                    38.0
+                  ],
+                  [
+                    "2018-03-03T08:00:00",
+                    "Observado (pedidos)",
+                    38.0
+                  ],
+                  [
+                    "2018-03-03T09:00:00",
+                    "Observado (pedidos)",
+                    41.0
+                  ],
+                  [
+                    "2018-03-03T10:00:00",
+                    "Observado (pedidos)",
+                    42.0
+                  ],
+                  [
+                    "2018-03-03T11:00:00",
+                    "Observado (pedidos)",
+                    44.0
+                  ],
+                  [
+                    "2018-03-03T12:00:00",
+                    "Observado (pedidos)",
+                    51.0
+                  ],
+                  [
+                    "2018-03-03T13:00:00",
+                    "Observado (pedidos)",
+                    51.0
+                  ],
+                  [
+                    "2018-03-03T14:00:00",
+                    "Observado (pedidos)",
+                    50.0
+                  ],
+                  [
+                    "2018-03-03T15:00:00",
+                    "Observado (pedidos)",
+                    51.0
+                  ],
+                  [
+                    "2018-03-03T16:00:00",
+                    "Observado (pedidos)",
+                    54.0
+                  ],
+                  [
+                    "2018-03-03T17:00:00",
+                    "Observado (pedidos)",
+                    54.0
+                  ],
+                  [
+                    "2018-03-03T18:00:00",
+                    "Observado (pedidos)",
+                    67.0
+                  ],
+                  [
+                    "2018-03-03T19:00:00",
+                    "Observado (pedidos)",
+                    66.0
+                  ],
+                  [
+                    "2018-03-03T20:00:00",
+                    "Observado (pedidos)",
+                    67.0
+                  ],
+                  [
+                    "2018-03-03T21:00:00",
+                    "Observado (pedidos)",
+                    72.0
+                  ],
+                  [
+                    "2018-03-03T22:00:00",
+                    "Observado (pedidos)",
+                    72.0
+                  ],
+                  [
+                    "2018-03-03T23:00:00",
+                    "Observado (pedidos)",
+                    72.0
+                  ],
+                  [
+                    "2018-03-04T00:00:00",
+                    "Observado (pedidos)",
+                    76.0
+                  ],
+                  [
+                    "2018-03-04T01:00:00",
+                    "Observado (pedidos)",
+                    74.0
+                  ],
+                  [
+                    "2018-03-04T02:00:00",
+                    "Observado (pedidos)",
+                    76.0
+                  ],
+                  [
+                    "2018-03-04T03:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-04T04:00:00",
+                    "Observado (pedidos)",
+                    76.0
+                  ],
+                  [
+                    "2018-03-04T05:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-04T06:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-04T07:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-04T08:00:00",
+                    "Observado (pedidos)",
+                    74.0
+                  ],
+                  [
+                    "2018-03-04T09:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-04T10:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-04T11:00:00",
+                    "Observado (pedidos)",
+                    87.0
+                  ],
+                  [
+                    "2018-03-04T12:00:00",
+                    "Observado (pedidos)",
+                    81.0
+                  ],
+                  [
+                    "2018-03-04T13:00:00",
+                    "Observado (pedidos)",
+                    85.0
+                  ],
+                  [
+                    "2018-03-04T14:00:00",
+                    "Observado (pedidos)",
+                    90.0
+                  ],
+                  [
+                    "2018-03-04T15:00:00",
+                    "Observado (pedidos)",
+                    91.0
+                  ],
+                  [
+                    "2018-03-04T16:00:00",
+                    "Observado (pedidos)",
+                    88.0
+                  ],
+                  [
+                    "2018-03-04T17:00:00",
+                    "Observado (pedidos)",
+                    90.0
+                  ],
+                  [
+                    "2018-03-04T18:00:00",
+                    "Observado (pedidos)",
+                    94.0
+                  ],
+                  [
+                    "2018-03-04T19:00:00",
+                    "Observado (pedidos)",
+                    97.0
+                  ],
+                  [
+                    "2018-03-04T20:00:00",
+                    "Observado (pedidos)",
+                    96.0
+                  ],
+                  [
+                    "2018-03-04T21:00:00",
+                    "Observado (pedidos)",
+                    96.0
+                  ],
+                  [
+                    "2018-03-04T22:00:00",
+                    "Observado (pedidos)",
+                    103.0
+                  ],
+                  [
+                    "2018-03-04T23:00:00",
+                    "Observado (pedidos)",
+                    107.0
+                  ],
+                  [
+                    "2018-03-05T00:00:00",
+                    "Observado (pedidos)",
+                    108.0
+                  ],
+                  [
+                    "2018-03-05T01:00:00",
+                    "Observado (pedidos)",
+                    106.0
+                  ],
+                  [
+                    "2018-03-05T02:00:00",
+                    "Observado (pedidos)",
+                    106.0
+                  ],
+                  [
+                    "2018-03-05T03:00:00",
+                    "Observado (pedidos)",
+                    106.0
+                  ],
+                  [
+                    "2018-03-05T04:00:00",
+                    "Observado (pedidos)",
+                    111.0
+                  ],
+                  [
+                    "2018-03-05T05:00:00",
+                    "Observado (pedidos)",
+                    107.0
+                  ],
+                  [
+                    "2018-03-05T06:00:00",
+                    "Observado (pedidos)",
+                    107.0
+                  ],
+                  [
+                    "2018-03-05T07:00:00",
+                    "Observado (pedidos)",
+                    109.0
+                  ],
+                  [
+                    "2018-03-05T08:00:00",
+                    "Observado (pedidos)",
+                    111.0
+                  ],
+                  [
+                    "2018-03-05T09:00:00",
+                    "Observado (pedidos)",
+                    115.0
+                  ],
+                  [
+                    "2018-03-05T10:00:00",
+                    "Observado (pedidos)",
+                    123.0
+                  ],
+                  [
+                    "2018-03-05T11:00:00",
+                    "Observado (pedidos)",
+                    123.0
+                  ],
+                  [
+                    "2018-03-05T12:00:00",
+                    "Observado (pedidos)",
+                    127.0
+                  ],
+                  [
+                    "2018-03-05T13:00:00",
+                    "Observado (pedidos)",
+                    135.0
+                  ],
+                  [
+                    "2018-03-05T14:00:00",
+                    "Observado (pedidos)",
+                    137.0
+                  ],
+                  [
+                    "2018-03-05T15:00:00",
+                    "Observado (pedidos)",
+                    142.0
+                  ],
+                  [
+                    "2018-03-05T16:00:00",
+                    "Observado (pedidos)",
+                    147.0
+                  ],
+                  [
+                    "2018-03-05T17:00:00",
+                    "Observado (pedidos)",
+                    143.0
+                  ],
+                  [
+                    "2018-03-05T18:00:00",
+                    "Observado (pedidos)",
+                    145.0
+                  ],
+                  [
+                    "2018-03-05T19:00:00",
+                    "Observado (pedidos)",
+                    151.0
+                  ],
+                  [
+                    "2018-03-05T20:00:00",
+                    "Observado (pedidos)",
+                    155.0
+                  ],
+                  [
+                    "2018-03-05T21:00:00",
+                    "Observado (pedidos)",
+                    155.0
+                  ],
+                  [
+                    "2018-03-05T22:00:00",
+                    "Observado (pedidos)",
+                    161.0
+                  ],
+                  [
+                    "2018-03-05T23:00:00",
+                    "Observado (pedidos)",
+                    160.0
+                  ],
+                  [
+                    "2018-03-06T00:00:00",
+                    "Observado (pedidos)",
+                    160.0
+                  ],
+                  [
+                    "2018-03-06T01:00:00",
+                    "Observado (pedidos)",
+                    160.0
+                  ],
+                  [
+                    "2018-03-06T02:00:00",
+                    "Observado (pedidos)",
+                    160.0
+                  ],
+                  [
+                    "2018-03-06T03:00:00",
+                    "Observado (pedidos)",
+                    162.0
+                  ],
+                  [
+                    "2018-03-06T04:00:00",
+                    "Observado (pedidos)",
+                    64.0
+                  ],
+                  [
+                    "2018-03-06T05:00:00",
+                    "Observado (pedidos)",
+                    51.0
+                  ],
+                  [
+                    "2018-03-06T06:00:00",
+                    "Observado (pedidos)",
+                    50.0
+                  ],
+                  [
+                    "2018-03-06T07:00:00",
+                    "Observado (pedidos)",
+                    51.0
+                  ],
+                  [
+                    "2018-03-06T08:00:00",
+                    "Observado (pedidos)",
+                    53.0
+                  ],
+                  [
+                    "2018-03-06T09:00:00",
+                    "Observado (pedidos)",
+                    53.0
+                  ],
+                  [
+                    "2018-03-06T10:00:00",
+                    "Observado (pedidos)",
+                    66.0
+                  ],
+                  [
+                    "2018-03-06T11:00:00",
+                    "Observado (pedidos)",
+                    68.0
+                  ],
+                  [
+                    "2018-03-06T12:00:00",
+                    "Observado (pedidos)",
+                    68.0
+                  ],
+                  [
+                    "2018-03-06T13:00:00",
+                    "Observado (pedidos)",
+                    71.0
+                  ],
+                  [
+                    "2018-03-06T14:00:00",
+                    "Observado (pedidos)",
+                    75.0
+                  ],
+                  [
+                    "2018-03-06T15:00:00",
+                    "Observado (pedidos)",
+                    78.0
+                  ],
+                  [
+                    "2018-03-06T16:00:00",
+                    "Observado (pedidos)",
+                    82.0
+                  ],
+                  [
+                    "2018-03-06T17:00:00",
+                    "Observado (pedidos)",
+                    86.0
+                  ],
+                  [
+                    "2018-03-06T18:00:00",
+                    "Observado (pedidos)",
+                    88.0
+                  ],
+                  [
+                    "2018-03-06T19:00:00",
+                    "Observado (pedidos)",
+                    88.0
+                  ],
+                  [
+                    "2018-03-06T20:00:00",
+                    "Observado (pedidos)",
+                    95.0
+                  ],
+                  [
+                    "2018-03-06T21:00:00",
+                    "Observado (pedidos)",
+                    101.0
+                  ],
+                  [
+                    "2018-03-06T22:00:00",
+                    "Observado (pedidos)",
+                    103.0
+                  ],
+                  [
+                    "2018-03-06T23:00:00",
+                    "Observado (pedidos)",
+                    107.0
+                  ],
+                  [
+                    "2018-03-07T00:00:00",
+                    "Observado (pedidos)",
+                    104.0
+                  ],
+                  [
+                    "2018-03-07T01:00:00",
+                    "Observado (pedidos)",
+                    108.0
+                  ]
+                ]
+              },
+              "url": "../../media/458c9baa007d2f1875700ccd5fb9ca3c",
+              "spec": {
+                "layer": [
+                  {
+                    "mark": {
+                      "type": "line"
+                    },
+                    "encoding": {
+                      "color": {
+                        "field": "color -- streamlit-generated",
+                        "legend": {
+                          "titlePadding": 5,
+                          "offset": 5,
+                          "orient": "bottom"
+                        },
+                        "title": " ",
+                        "type": "nominal"
+                      },
+                      "tooltip": [
+                        {
+                          "field": "fecha",
+                          "type": "temporal"
+                        },
+                        {
+                          "field": "value -- streamlit-generated",
+                          "title": "value",
+                          "type": "quantitative"
+                        },
+                        {
+                          "field": "color -- streamlit-generated",
+                          "title": "color",
+                          "type": "nominal"
+                        }
+                      ],
+                      "x": {
+                        "axis": {
+                          "grid": false
+                        },
+                        "field": "fecha",
+                        "scale": {},
+                        "title": "",
+                        "type": "temporal"
+                      },
+                      "y": {
+                        "axis": {
+                          "grid": true
+                        },
+                        "field": "value -- streamlit-generated",
+                        "scale": {},
+                        "title": "",
+                        "type": "quantitative"
+                      }
+                    },
+                    "name": "view_1"
+                  },
+                  {
+                    "mark": {
+                      "type": "point",
+                      "opacity": 0
+                    },
+                    "encoding": {
+                      "color": {
+                        "field": "color -- streamlit-generated",
+                        "legend": {
+                          "titlePadding": 5,
+                          "offset": 5,
+                          "orient": "bottom"
+                        },
+                        "title": " ",
+                        "type": "nominal"
+                      },
+                      "tooltip": [
+                        {
+                          "field": "fecha",
+                          "type": "temporal"
+                        },
+                        {
+                          "field": "value -- streamlit-generated",
+                          "title": "value",
+                          "type": "quantitative"
+                        },
+                        {
+                          "field": "color -- streamlit-generated",
+                          "title": "color",
+                          "type": "nominal"
+                        }
+                      ],
+                      "x": {
+                        "axis": {
+                          "grid": false
+                        },
+                        "field": "fecha",
+                        "scale": {},
+                        "title": "",
+                        "type": "temporal"
+                      },
+                      "y": {
+                        "axis": {
+                          "grid": true
+                        },
+                        "field": "value -- streamlit-generated",
+                        "scale": {},
+                        "title": "",
+                        "type": "quantitative"
+                      }
+                    },
+                    "name": "view_2"
+                  },
+                  {
+                    "mark": {
+                      "type": "point",
+                      "filled": true,
+                      "size": 65
+                    },
+                    "encoding": {
+                      "color": {
+                        "field": "color -- streamlit-generated",
+                        "legend": {
+                          "titlePadding": 5,
+                          "offset": 5,
+                          "orient": "bottom"
+                        },
+                        "title": " ",
+                        "type": "nominal"
+                      },
+                      "tooltip": [
+                        {
+                          "field": "fecha",
+                          "type": "temporal"
+                        },
+                        {
+                          "field": "value -- streamlit-generated",
+                          "title": "value",
+                          "type": "quantitative"
+                        },
+                        {
+                          "field": "color -- streamlit-generated",
+                          "title": "color",
+                          "type": "nominal"
+                        }
+                      ],
+                      "x": {
+                        "axis": {
+                          "grid": false
+                        },
+                        "field": "fecha",
+                        "scale": {},
+                        "title": "",
+                        "type": "temporal"
+                      },
+                      "y": {
+                        "axis": {
+                          "grid": true
+                        },
+                        "field": "value -- streamlit-generated",
+                        "scale": {},
+                        "title": "",
+                        "type": "quantitative"
+                      }
+                    },
+                    "transform": [
+                      {
+                        "filter": {
+                          "param": "param_1",
+                          "empty": false
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "config": {
+                  "legend": {
+                    "symbolType": "stroke"
+                  }
+                },
+                "data": {
+                  "name": "999fe8a0cb4ba3bb86083f562bf768bf"
+                },
+                "params": [
+                  {
+                    "name": "param_1",
+                    "select": {
+                      "type": "point",
+                      "clear": "mouseleave",
+                      "fields": [
+                        "fecha"
+                      ],
+                      "nearest": true,
+                      "on": "mousemove{16}"
+                    },
+                    "views": [
+                      "view_2"
+                    ]
+                  },
+                  {
+                    "name": "param_2",
+                    "select": {
+                      "type": "interval",
+                      "encodings": [
+                        "x",
+                        "y"
+                      ]
+                    },
+                    "bind": "scales",
+                    "views": [
+                      "view_1"
+                    ]
+                  }
+                ],
+                "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+                "autosize": {
+                  "type": "fit",
+                  "contains": "padding"
+                }
+              }
+            }
+          },
+          {
+            "type": "download_button",
+            "key": "v2_download",
+            "props": {
+              "label": "Descargar trayectoria",
+              "type": "secondary",
+              "disabled": false,
+              "url": "../../media/68d6dd7ee4a177d199b9fc3a9a29200e.csv",
+              "file_name": "V2_B_reserva_reutilizada.csv",
+              "mime": "text/csv",
+              "on_click": "rerun"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "#### Comparación interna de candidatos"
+            }
+          },
+          {
+            "type": "dataframe",
+            "props": {
+              "hide_index": true,
+              "alt": "A constante, B calendario, C Erlang y M mezcla en las mismas ventanas de desarrollo"
+            },
+            "data": {
+              "columns": [
+                {
+                  "name": "modelo",
+                  "type": "large_string"
+                },
+                {
+                  "name": "ventana",
+                  "type": "int64"
+                },
+                {
+                  "name": "variable",
+                  "type": "large_string"
+                },
+                {
+                  "name": "NRMSE",
+                  "type": "double"
+                },
+                {
+                  "name": "NMAE",
+                  "type": "double"
+                },
+                {
+                  "name": "RMSE",
+                  "type": "double"
+                },
+                {
+                  "name": "cumple",
+                  "type": "bool"
+                }
+              ],
+              "row_count": 48,
+              "column_count": 7,
+              "complete": true,
+              "preview": {
+                "rows": [
+                  [
+                    "A",
+                    5123,
+                    "X1",
+                    2.1462169720255218,
+                    1.3813036796854359,
+                    22.93305939208454,
+                    false
+                  ],
+                  [
+                    "A",
+                    5123,
+                    "X2",
+                    0.8238598473120353,
+                    0.6772101638583651,
+                    79.75970029504252,
+                    false
+                  ],
+                  [
+                    "A",
+                    5123,
+                    "X3",
+                    0.6404022110065384,
+                    0.5480720967988697,
+                    150.3981404913411,
+                    false
+                  ],
+                  [
+                    "A",
+                    7043,
+                    "X1",
+                    0.7449343917679145,
+                    0.5894078110217957,
+                    15.036611226933665,
+                    false
+                  ],
+                  [
+                    "A",
+                    7043,
+                    "X2",
+                    0.5385591930987099,
+                    0.4455099918275267,
+                    79.8704006003656,
+                    false
+                  ],
+                  [
+                    "A",
+                    7043,
+                    "X3",
+                    0.2463246184116715,
+                    0.20928837944783582,
+                    105.3447468671516,
+                    false
+                  ],
+                  [
+                    "A",
+                    8963,
+                    "X1",
+                    1.2689816794786297,
+                    0.7811533551504133,
+                    34.37874253869908,
+                    false
+                  ],
+                  [
+                    "A",
+                    8963,
+                    "X2",
+                    0.9365908821783199,
+                    0.6621581547501302,
+                    182.06049817650944,
+                    false
+                  ],
+                  [
+                    "A",
+                    8963,
+                    "X3",
+                    0.44682258521929763,
+                    0.2761373819680346,
+                    255.53745262728157,
+                    false
+                  ],
+                  [
+                    "A",
+                    10883,
+                    "X1",
+                    0.9513598099054142,
+                    0.682655028552083,
+                    35.22138047676287,
+                    false
+                  ],
+                  [
+                    "A",
+                    10883,
+                    "X2",
+                    0.5715017265360712,
+                    0.4590135288780066,
+                    153.69536719764415,
+                    false
+                  ],
+                  [
+                    "A",
+                    10883,
+                    "X3",
+                    0.5604394540232911,
+                    0.5099584615882782,
+                    422.97482560290564,
+                    false
+                  ],
+                  [
+                    "B",
+                    5123,
+                    "X1",
+                    2.1079964650311704,
+                    1.3613848269814168,
+                    22.524660256152902,
+                    false
+                  ],
+                  [
+                    "B",
+                    5123,
+                    "X2",
+                    0.6993092121499139,
+                    0.5706375213147289,
+                    67.70167687698236,
+                    false
+                  ],
+                  [
+                    "B",
+                    5123,
+                    "X3",
+                    0.6420480064718382,
+                    0.5521093101210898,
+                    150.7846547371635,
+                    false
+                  ],
+                  [
+                    "B",
+                    7043,
+                    "X1",
+                    0.7194263853292605,
+                    0.5640766884131148,
+                    14.52172833223754,
+                    false
+                  ],
+                  [
+                    "B",
+                    7043,
+                    "X2",
+                    0.4168300712618453,
+                    0.3419006323133777,
+                    61.81750344360109,
+                    false
+                  ],
+                  [
+                    "B",
+                    7043,
+                    "X3",
+                    0.2475110672933491,
+                    0.2136932034131557,
+                    105.85215111248066,
+                    false
+                  ],
+                  [
+                    "B",
+                    8963,
+                    "X1",
+                    1.2529627416449298,
+                    0.7483348144376757,
+                    33.94476390178569,
+                    false
+                  ],
+                  [
+                    "B",
+                    8963,
+                    "X2",
+                    0.800410404693099,
+                    0.5791795988586594,
+                    155.58887001458396,
+                    false
+                  ],
+                  [
+                    "B",
+                    8963,
+                    "X3",
+                    0.4324370299226463,
+                    0.26599831674682234,
+                    247.3103659115754,
+                    false
+                  ],
+                  [
+                    "B",
+                    10883,
+                    "X1",
+                    0.9164921147211775,
+                    0.6493212107808445,
+                    33.93050362276386,
+                    false
+                  ],
+                  [
+                    "B",
+                    10883,
+                    "X2",
+                    0.484400448374476,
+                    0.3727425624878344,
+                    130.2710058898125,
+                    false
+                  ],
+                  [
+                    "B",
+                    10883,
+                    "X3",
+                    0.5571355008830778,
+                    0.5079783845953307,
+                    420.4812663196511,
+                    false
+                  ],
+                  [
+                    "C",
+                    5123,
+                    "X1",
+                    2.1958383689773617,
+                    1.4385938723071325,
+                    23.463280920591405,
+                    false
+                  ],
+                  [
+                    "C",
+                    5123,
+                    "X2",
+                    0.840697111447037,
+                    0.6897948103679624,
+                    81.3897532046214,
+                    false
+                  ],
+                  [
+                    "C",
+                    5123,
+                    "X3",
+                    0.6255442036183739,
+                    0.5021608425756449,
+                    146.90874485188147,
+                    false
+                  ],
+                  [
+                    "C",
+                    7043,
+                    "X1",
+                    0.762925465638096,
+                    0.5985929112110447,
+                    15.399763722415772,
+                    false
+                  ],
+                  [
+                    "C",
+                    7043,
+                    "X2",
+                    0.5682243754447451,
+                    0.47269208132737606,
+                    84.26986128773791,
+                    false
+                  ],
+                  [
+                    "C",
+                    7043,
+                    "X3",
+                    0.23172442082395425,
+                    0.19628221666078788,
+                    99.10073386915727,
+                    false
+                  ],
+                  [
+                    "C",
+                    8963,
+                    "X1",
+                    1.3180759963711548,
+                    0.8122760238239557,
+                    35.70878607506823,
+                    false
+                  ],
+                  [
+                    "C",
+                    8963,
+                    "X2",
+                    0.9330419196967502,
+                    0.6711107219066144,
+                    181.3706282560362,
+                    false
+                  ],
+                  [
+                    "C",
+                    8963,
+                    "X3",
+                    0.38458346311258945,
+                    0.2281842085621313,
+                    219.9429521632982,
+                    false
+                  ],
+                  [
+                    "C",
+                    10883,
+                    "X1",
+                    0.9685012798185665,
+                    0.6833661056987368,
+                    35.85599445504533,
+                    false
+                  ],
+                  [
+                    "C",
+                    10883,
+                    "X2",
+                    0.5922801341706213,
+                    0.47794610968707296,
+                    159.28335554989445,
+                    false
+                  ],
+                  [
+                    "C",
+                    10883,
+                    "X3",
+                    0.6589462018262155,
+                    0.5972054084865261,
+                    497.3198314256395,
+                    false
+                  ],
+                  [
+                    "M",
+                    5123,
+                    "X1",
+                    2.1348829828867144,
+                    1.3842823941937776,
+                    22.811951857544727,
+                    false
+                  ],
+                  [
+                    "M",
+                    5123,
+                    "X2",
+                    0.8215307448306203,
+                    0.6735577707970053,
+                    79.53421471460041,
+                    false
+                  ],
+                  [
+                    "M",
+                    5123,
+                    "X3",
+                    0.633409470983853,
+                    0.5463683076657225,
+                    148.75589897768631,
+                    false
+                  ],
+                  [
+                    "M",
+                    7043,
+                    "X1",
+                    0.754322166945624,
+                    0.6040702481132381,
+                    15.226104861800042,
+                    false
+                  ],
+                  [
+                    "M",
+                    7043,
+                    "X2",
+                    0.4999058856336777,
+                    0.4123298506553247,
+                    74.1379663734089,
+                    false
+                  ],
+                  [
+                    "M",
+                    7043,
+                    "X3",
+                    0.25472937811371676,
+                    0.2176220465953152,
+                    108.93917964857773,
+                    false
+                  ],
+                  [
+                    "M",
+                    8963,
+                    "X1",
+                    1.269279844080622,
+                    0.7811880916283492,
+                    34.38682029447114,
+                    false
+                  ],
+                  [
+                    "M",
+                    8963,
+                    "X2",
+                    1.087532687186427,
+                    0.6994225601502054,
+                    211.4015271554841,
+                    false
+                  ],
+                  [
+                    "M",
+                    8963,
+                    "X3",
+                    0.52355166619498,
+                    0.3186372735546423,
+                    299.41874812029073,
+                    false
+                  ],
+                  [
+                    "M",
+                    10883,
+                    "X1",
+                    0.9600119007317738,
+                    0.70525371171203,
+                    35.541699434681654,
+                    false
+                  ],
+                  [
+                    "M",
+                    10883,
+                    "X2",
+                    0.5668577989362307,
+                    0.4539310546320286,
+                    152.4464643080188,
+                    false
+                  ],
+                  [
+                    "M",
+                    10883,
+                    "X3",
+                    0.559916236508256,
+                    0.5097448232169961,
+                    422.57994291649646,
+                    false
+                  ]
+                ]
+              },
+              "url": "../../media/b0abc3b5908f964f57334cb9832144ae"
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "C y M tienen siete EDO y se agregan a cuatro etapas. La mezcla fue una investigación adaptativa posterior; tampoco mejoró la selección. El híbrido no se ejecutó porque los candidatos simples no satisficieron su condición previa."
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "#### Residuos, conservación y estabilidad"
+            }
+          },
+          {
+            "type": "image",
+            "props": {
+              "url": "../../media/ddefcdaa7ab7182de3eea276e2d0fcfb.png",
+              "alt": "Diagnósticos horarios completos de X1, V2_B, Reserva histórica reutilizada"
+            }
+          },
+          {
+            "type": "dataframe",
+            "props": {
+              "hide_index": true,
+              "alt": "Conservación en pedidos, mínimos de estados y flujos, monotonicidad de entregas"
+            },
+            "data": {
+              "columns": [
+                {
+                  "name": "modelo",
+                  "type": "large_string"
+                },
+                {
+                  "name": "ventana",
+                  "type": "large_string"
+                },
+                {
+                  "name": "masa_max",
+                  "type": "double"
+                },
+                {
+                  "name": "estado_min",
+                  "type": "double"
+                },
+                {
+                  "name": "flujo_min",
+                  "type": "double"
+                },
+                {
+                  "name": "X4_monotono",
+                  "type": "bool"
+                }
+              ],
+              "row_count": 16,
+              "column_count": 6,
+              "complete": true,
+              "preview": {
+                "rows": [
+                  [
+                    "A",
+                    "5123",
+                    5.566107574850321e-10,
+                    5.8412945700856165,
+                    0.7898205780216081,
+                    true
+                  ],
+                  [
+                    "A",
+                    "7043",
+                    1.1677911970764399e-09,
+                    19.137785911774017,
+                    2.0066589122293728,
+                    true
+                  ],
+                  [
+                    "A",
+                    "8963",
+                    1.1641532182693481e-09,
+                    22.4450142289698,
+                    2.525347479661235,
+                    true
+                  ],
+                  [
+                    "A",
+                    "10883",
+                    1.7462298274040222e-10,
+                    13.473493700310726,
+                    1.3814516606459009,
+                    true
+                  ],
+                  [
+                    "B",
+                    "5123",
+                    7.639755494892597e-11,
+                    6.376232082210657,
+                    0.8513801832763193,
+                    true
+                  ],
+                  [
+                    "B",
+                    "7043",
+                    4.001776687800884e-11,
+                    24.995945991027057,
+                    2.33813012585113,
+                    true
+                  ],
+                  [
+                    "B",
+                    "8963",
+                    1.0913936421275139e-10,
+                    26.28315455063701,
+                    2.5711045626316604,
+                    true
+                  ],
+                  [
+                    "B",
+                    "10883",
+                    1.6007106751203537e-10,
+                    15.15417508500454,
+                    1.6763749538447943,
+                    true
+                  ],
+                  [
+                    "C",
+                    "5123",
+                    5.438778316602111e-10,
+                    0.47280447217356475,
+                    0.6308290343398819,
+                    true
+                  ],
+                  [
+                    "C",
+                    "7043",
+                    3.019522409886122e-10,
+                    4.518830019483162,
+                    2.0107993050979314,
+                    true
+                  ],
+                  [
+                    "C",
+                    "8963",
+                    9.022187441587448e-10,
+                    4.411847451048244,
+                    2.5330822034295366,
+                    true
+                  ],
+                  [
+                    "C",
+                    "10883",
+                    1.8189894035458565e-10,
+                    2.976478517510182,
+                    1.3204126862199672,
+                    true
+                  ],
+                  [
+                    "V1_historico",
+                    "entrenamiento",
+                    3.572495188564062e-09,
+                    0.0,
+                    0.0,
+                    true
+                  ],
+                  [
+                    "V2_B",
+                    "entrenamiento",
+                    6.184563972055912e-10,
+                    0.0,
+                    0.0,
+                    true
+                  ],
+                  [
+                    "V1_historico",
+                    "reserva_reutilizada",
+                    2.648448571562767e-09,
+                    1.0910978654486353e-51,
+                    1.1719461364709464e-52,
+                    true
+                  ],
+                  [
+                    "V2_B",
+                    "reserva_reutilizada",
+                    6.548361852765083e-10,
+                    1.264496463963919e-51,
+                    1.744052996506502e-52,
+                    true
+                  ]
+                ]
+              },
+              "url": "../../media/0170647353fb9641824183c1a20c697c"
+            }
+          },
+          {
+            "type": "json",
+            "props": {
+              "body": [
+                {
+                  "h_grueso": 0.25,
+                  "h_fino": 0.125,
+                  "diferencia_max": 1.11194583496399e-06
+                },
+                {
+                  "h_grueso": 0.125,
+                  "h_fino": 0.0625,
+                  "diferencia_max": 6.857442258478841e-08
+                }
+              ],
+              "expanded": true
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "AgentPy publica la misma trayectoria del motor RK4, sin integrar por separado. Pasar estos controles matemáticos no demuestra precisión empírica."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "E0, E1 y E2 conservan su significado y sus resultados V1 en las pantallas originales. No se habilitan escenarios V2: el desempeño observado no justifica trasladar las mejoras hipotéticas anteriores. La presentación académica original permanece intacta."
+            }
+          }
+        ]
+      },
+      {
+        "type": "sidebar",
+        "children": [
+          {
+            "type": "markdown",
+            "props": {
+              "body": "### :material/hub: OLIST / LAB"
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "MODELADO Y SIMULACIÓN CONTINUA"
+            }
+          },
+          {
+            "type": "selectbox",
+            "key": "window",
+            "props": {
+              "label": "Ventana de estudio",
+              "options": [
+                "Principal · marzo–octubre 2018",
+                "Sensibilidad · enero 2018"
+              ],
+              "disabled": false,
+              "required": false,
+              "label_visibility": "visible",
+              "accept_new_options": false,
+              "filter_mode": "fuzzy",
+              "on_change": "rerun"
+            },
+            "value_schema": {
+              "type": "string"
+            },
+            "value": "Principal · marzo–octubre 2018"
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Cuatro agentes · Un balance de pedidos"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "**RK4 · 0,25 h**  \nPython + AgentPy"
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Cohorte retrospectiva de 95.082 pedidos entregados completos."
+            }
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "children": []
+      },
+      {
+        "type": "bottom",
+        "children": []
+      }
+    ]
+  },
+  "actions": [
+    {
+      "key": "v2_version",
+      "kind": "value",
+      "type": "segmented_control",
+      "label": "Versión del modelo"
+    },
+    {
+      "key": "v2_scope",
+      "kind": "value",
+      "type": "segmented_control",
+      "label": "Período"
+    },
+    {
+      "key": "v2_hour",
+      "kind": "value",
+      "type": "slider",
+      "label": "Hora desde el origen"
+    },
+    {
+      "key": "v2_stage",
+      "kind": "value",
+      "type": "segmented_control",
+      "label": "Etapa"
+    },
+    {
+      "key": "v2_download",
+      "kind": "trigger",
+      "type": "download_button",
+      "label": "Descargar trayectoria"
+    },
+    {
+      "key": "window",
+      "kind": "value",
+      "type": "selectbox",
+      "label": "Ventana de estudio"
+    }
+  ]
+}

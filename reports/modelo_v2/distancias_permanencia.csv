@@ -1,0 +1,10 @@
+variable,modelo,max_distancia_KM,p_valor
+X1,V1,0.5551713709852117,"no calculado: censura, parámetros ajustados y selección"
+X1,M completo,0.5292573156882225,"no calculado: censura, parámetros ajustados y selección"
+X1,C prefijo 10883,0.6411329087567936,"no calculado: censura, parámetros ajustados y selección"
+X2,V1,0.06862670811389293,"no calculado: censura, parámetros ajustados y selección"
+X2,M completo,0.06855634592189874,"no calculado: censura, parámetros ajustados y selección"
+X2,C prefijo 10883,0.14107976867765204,"no calculado: censura, parámetros ajustados y selección"
+X3,V1,0.1392836592448904,"no calculado: censura, parámetros ajustados y selección"
+X3,M completo,0.13926600863026795,"no calculado: censura, parámetros ajustados y selección"
+X3,C prefijo 10883,0.0643373024801368,"no calculado: censura, parámetros ajustados y selección"

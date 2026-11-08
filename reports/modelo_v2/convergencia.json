@@ -1,0 +1,12 @@
+[
+  {
+    "h_grueso": 0.25,
+    "h_fino": 0.125,
+    "diferencia_max": 1.11194583496399e-06
+  },
+  {
+    "h_grueso": 0.125,
+    "h_fino": 0.0625,
+    "diferencia_max": 6.857442258478841e-08
+  }
+]
