@@ -1,0 +1,266 @@
+[
+  {
+    "request": {
+      "page": "modelo-v2"
+    },
+    "status": "ready",
+    "actions": [
+      {
+        "key": "v2_version",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Versión del modelo"
+      },
+      {
+        "key": "v2_scope",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Período"
+      },
+      {
+        "key": "v2_hour",
+        "kind": "value",
+        "type": "slider",
+        "label": "Hora desde el origen"
+      },
+      {
+        "key": "v2_stage",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Etapa"
+      },
+      {
+        "key": "v2_download",
+        "kind": "trigger",
+        "type": "download_button",
+        "label": "Descargar trayectoria"
+      },
+      {
+        "key": "window",
+        "kind": "value",
+        "type": "selectbox",
+        "label": "Ventana de estudio"
+      }
+    ]
+  },
+  {
+    "request": {
+      "v2_hour": 5488
+    },
+    "status": "ready",
+    "actions": [
+      {
+        "key": "v2_version",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Versión del modelo"
+      },
+      {
+        "key": "v2_scope",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Período"
+      },
+      {
+        "key": "v2_hour",
+        "kind": "value",
+        "type": "slider",
+        "label": "Hora desde el origen"
+      },
+      {
+        "key": "v2_stage",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Etapa"
+      },
+      {
+        "key": "v2_download",
+        "kind": "trigger",
+        "type": "download_button",
+        "label": "Descargar trayectoria"
+      },
+      {
+        "key": "window",
+        "kind": "value",
+        "type": "selectbox",
+        "label": "Ventana de estudio"
+      }
+    ]
+  },
+  {
+    "request": {
+      "v2_version": "Modelo original V1"
+    },
+    "status": "ready",
+    "actions": [
+      {
+        "key": "v2_version",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Versión del modelo"
+      },
+      {
+        "key": "v2_scope",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Período"
+      },
+      {
+        "key": "v2_hour",
+        "kind": "value",
+        "type": "slider",
+        "label": "Hora desde el origen"
+      },
+      {
+        "key": "v2_stage",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Etapa"
+      },
+      {
+        "key": "v2_download",
+        "kind": "trigger",
+        "type": "download_button",
+        "label": "Descargar trayectoria"
+      },
+      {
+        "key": "window",
+        "kind": "value",
+        "type": "selectbox",
+        "label": "Ventana de estudio"
+      }
+    ]
+  },
+  {
+    "request": {
+      "v2_scope": "Entrenamiento"
+    },
+    "status": "ready",
+    "actions": [
+      {
+        "key": "v2_version",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Versión del modelo"
+      },
+      {
+        "key": "v2_scope",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Período"
+      },
+      {
+        "key": "v2_hour",
+        "kind": "value",
+        "type": "slider",
+        "label": "Hora desde el origen"
+      },
+      {
+        "key": "v2_stage",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Etapa"
+      },
+      {
+        "key": "v2_download",
+        "kind": "trigger",
+        "type": "download_button",
+        "label": "Descargar trayectoria"
+      },
+      {
+        "key": "window",
+        "kind": "value",
+        "type": "selectbox",
+        "label": "Ventana de estudio"
+      }
+    ]
+  },
+  {
+    "request": {
+      "v2_hour": 12803
+    },
+    "status": "ready",
+    "actions": [
+      {
+        "key": "v2_version",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Versión del modelo"
+      },
+      {
+        "key": "v2_scope",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Período"
+      },
+      {
+        "key": "v2_hour",
+        "kind": "value",
+        "type": "slider",
+        "label": "Hora desde el origen"
+      },
+      {
+        "key": "v2_stage",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Etapa"
+      },
+      {
+        "key": "v2_download",
+        "kind": "trigger",
+        "type": "download_button",
+        "label": "Descargar trayectoria"
+      },
+      {
+        "key": "window",
+        "kind": "value",
+        "type": "selectbox",
+        "label": "Ventana de estudio"
+      }
+    ]
+  },
+  {
+    "request": {
+      "v2_stage": "X4"
+    },
+    "status": "ready",
+    "actions": [
+      {
+        "key": "v2_version",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Versión del modelo"
+      },
+      {
+        "key": "v2_scope",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Período"
+      },
+      {
+        "key": "v2_hour",
+        "kind": "value",
+        "type": "slider",
+        "label": "Hora desde el origen"
+      },
+      {
+        "key": "v2_stage",
+        "kind": "value",
+        "type": "segmented_control",
+        "label": "Etapa"
+      },
+      {
+        "key": "v2_download",
+        "kind": "trigger",
+        "type": "download_button",
+        "label": "Descargar trayectoria"
+      },
+      {
+        "key": "window",
+        "kind": "value",
+        "type": "selectbox",
+        "label": "Ventana de estudio"
+      }
+    ]
+  }
+]

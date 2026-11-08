@@ -1,0 +1,26 @@
+[
+  {
+    "alcance": "entrenamiento",
+    "h_grueso": 0.25,
+    "h_fino": 0.125,
+    "diferencia_max": 2.0820389181608334e-06
+  },
+  {
+    "alcance": "entrenamiento",
+    "h_grueso": 0.125,
+    "h_fino": 0.0625,
+    "diferencia_max": 1.2797420367860468e-07
+  },
+  {
+    "alcance": "reserva_reutilizada",
+    "h_grueso": 0.25,
+    "h_fino": 0.125,
+    "diferencia_max": 1.0198514246440027e-06
+  },
+  {
+    "alcance": "reserva_reutilizada",
+    "h_grueso": 0.125,
+    "h_fino": 0.0625,
+    "diferencia_max": 6.265895535761956e-08
+  }
+]

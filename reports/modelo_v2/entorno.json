@@ -1,0 +1,25 @@
+{
+  "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "fecha_utc": "2026-11-08T13:15:58.580583+00:00",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "streamlit": "1.67.0",
+    "agentpy": "0.1.5"
+  },
+  "inputs": {
+    "data\\processed\\anomalias_cronologicas.csv": "8d6485664ad9a9d6600c5a4595f4f00c2fb966cdc9b485a03101f377a1e7fc43",
+    "data\\processed\\calidad_fechas.csv": "f585f41e1f49b31f7dcf6e2d1b892a7cb9deb3d5ed0754d73ee51c1f1a1183a2",
+    "data\\processed\\distribucion_estados.csv": "b957dda26d1eeb03105e724cbb07bf2e9191ec7b74836f5d058544104080c31f",
+    "data\\processed\\duraciones_etapas_horas.csv": "9168b43849690dd7df8340d0adc6ac51ba00eb2a8bf152ad87a915137d7fd0f0",
+    "data\\processed\\eventos_por_hora.csv": "d2129b3ab9870023ae471f84e9557b7b4bbb8ce378b1b5301fd6453f21bbbff5",
+    "data\\processed\\exclusiones.csv": "7172ce8d9291b842fe2259a54573750e871edf30a78784f3fb586582d1cfd89e",
+    "data\\processed\\niveles_reales_4_tanques.csv": "879f9d839fd3e0cfa1a8c3199a35d9697622b809ccd935e3505db6574c214eaf",
+    "data\\processed\\pedidos_limpios.csv": "b1f9244029f850affbafb7ea95450ec9ab5cd361face59b07242f29f873164d4"
+  },
+  "archive_sha256": "967e41e04fc306fe604e2a693f488995a8b41e5047418f8a5c8e4abd6deca784",
+  "git_commit": "6b732fba7bba43071cbf5ad1624eec4e10f1ded8"
+}

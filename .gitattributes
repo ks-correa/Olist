@@ -1,0 +1,14 @@
+# Preserve exact bytes of frozen V2 code and scientific evidence.
+/reports/modelo_v2/** -text
+/src/model_v2.py -text
+/src/calibration_v2.py -text
+/src/goodness_of_fit.py -text
+/src/model_mixture.py -text
+/src/calibration_mixture.py -text
+/src/validation_v2.py -text
+/scripts/experimentar_modelo_v2.py -text
+/scripts/experimentar_mezcla_v2.py -text
+/scripts/diagnosticar_modelo_v2.py -text
+/scripts/informar_modelo_v2.py -text
+/scripts/reproducir_modelo_v2.py -text
+/scripts/verificar_interfaz_v2.py -text
