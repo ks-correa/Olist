@@ -1,4 +1,4 @@
-# Refinamiento de interfaz y sincronización — Prompt 10
+# Refinamiento de interfaz y sincronización
 
 ## Investigación del desfase
 

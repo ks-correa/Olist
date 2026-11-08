@@ -1,4 +1,4 @@
-﻿# Olist: auditoría y reconstrucción de cuatro depósitos
+# Olist: auditoría y reconstrucción de cuatro depósitos
 
 Fase 1: cohorte histórica entregada con eventos verificables; sin simulación.
 El ZIP original permanece intacto en la raíz. Se lee directamente; data/raw se reserva para futuras fuentes originales.
@@ -188,7 +188,7 @@ Simulación ahora presenta cuatro tanques SVG persistentes con bloques agregados
 
 Detalles, archivos e instrucciones para las capturas y grabación de revisión visual: [rediseño de tanques](docs/redisenio_tanques.md). Pruebas de esta iteración: [registro](reports/pruebas_tanques.txt). No hay dependencias adicionales.
 
-## Refinamiento temporal y comunicación académica — Prompt 10
+## Refinamiento temporal y comunicación académica
 
 Se conserva el diseño de los tanques. Los datos del instante actual se publican juntos dentro del componente, con una revisión que descarta actualizaciones atrasadas. Esto evita mezclar la fecha de un SVG anterior con indicadores nativos más recientes. La gráfica móvil de Simulación se incluye en esa misma actualización; las gráficas y tablas de Escenarios se conservan. Se retira el recuadro lateral, se simplifican los mensajes y se mantienen intactas las métricas originales y la clasificación C en el detalle técnico.
 

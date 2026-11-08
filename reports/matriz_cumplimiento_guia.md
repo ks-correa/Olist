@@ -2,7 +2,7 @@
 
 ## Alcance de esta revisión
 
-No se encontró `Guia_Proyecto_Simulacion_Tanques_Parejas (1).docx` al buscar documentos Word en el proyecto. Debe copiarse a la raíz de Olist. Esta matriz verifica los requisitos del Prompt 11 y su estructura provisional de 13 diapositivas; no certifica requisitos adicionales, rúbrica, duración ni preguntas que sólo aparezcan en la guía ausente.
+No se encontró `Guia_Proyecto_Simulacion_Tanques_Parejas (1).docx` al buscar documentos Word en el proyecto. Debe copiarse a la raíz de Olist. Esta matriz revisa los requisitos documentados del proyecto y la estructura provisional de 13 diapositivas; no certifica requisitos adicionales, rúbrica, duración ni preguntas que sólo aparezcan en la guía ausente.
 
 La aprobación de la adaptación logística fue comunicada por el estudiante. Se registra como antecedente declarado, sin convertirlo en evidencia documental del docente. El guion conserva exactamente el orden solicitado; no se crea aún el PowerPoint.
 
@@ -13,7 +13,7 @@ La aprobación de la adaptación logística fue comunicada por el estudiante. Se
 | Requisito revisado | Archivo o evidencia | Cumplimiento funcional/documental | Cumplimiento científico y pendiente |
 |---|---|---|---|
 | Contrastar la guía original completa | Búsqueda local de `*.docx`: sin resultados | Pendiente | Copiar la guía y cotejar rúbrica, preguntas y exigencias físicas originales. |
-| Autorización docente para tanques virtuales | Declaración expresa del estudiante en el Prompt 11 | Declarado; no se encontró acta, correo o mensaje archivado | Archivar la aprobación y su alcance. No afirmar homologación documental completa. |
+| Autorización docente para tanques virtuales | Declaración del estudiante sin respaldo documental archivado | Declarado; no se encontró acta, correo o mensaje archivado | Archivar la aprobación y su alcance. No afirmar homologación documental completa. |
 | Problema y pregunta de decisión | [Guion, diapositiva 2](../docs/guion_presentacion_13_diapositivas.md#diapositiva-2-problema-y-pregunta-de-decisión) | Documentado | Pregunta limitada a qué tasa acelerar en este modelo; no optimización operacional real de Olist. |
 | Fuente de datos reales | ZIP original; [auditoría](auditoria_dataset.md); [publicación Olist en Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) | ZIP y conteos verificados; URL de publicación identificada | Falta archivar ficha, condiciones de uso y registro de descarga. El hash local no prueba por sí solo identidad con una versión remota. No son mediciones propias. |
 | Depuración trazable | `src/data_processing.py`; `data/processed/pedidos_limpios.csv`, `exclusiones.csv`, `calidad_fechas.csv`, `anomalias_cronologicas.csv` | Verificado: 99.441 originales; 95.082 incluidos | Cohorte retrospectiva de entregados completos; excluye otras situaciones y no representa todo el inventario operativo. |

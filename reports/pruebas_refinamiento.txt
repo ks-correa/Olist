@@ -1,4 +1,4 @@
-PROMPT 10 - REFINAMIENTO, SINCRONIZACION Y VALIDACION
+REFINAMIENTO, SINCRONIZACION Y VALIDACION
 
 COMANDO: uvx ty check app.py app_pages ui tests/test_refinement.py --python .venv/Scripts/python.exe
 All checks passed!

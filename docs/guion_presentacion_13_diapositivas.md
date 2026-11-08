@@ -1,6 +1,6 @@
 # OLIST / LAB — Guion de presentación en 13 diapositivas
 
-Documento para revisión previa al PowerPoint. La guía Word original no está en el proyecto; se sigue exactamente el orden de 13 diapositivas indicado en el Prompt 11. Integrantes y fecha quedan por confirmar. No se han creado capturas, figuras nuevas ni un archivo PowerPoint.
+Documento para revisión previa al PowerPoint. La guía Word original no está en el proyecto; se utiliza una estructura provisional de 13 diapositivas. Integrantes y fecha quedan por confirmar. No se han creado capturas, figuras nuevas ni un archivo PowerPoint.
 
 Cada sección separa el texto que se verá en pantalla de las instrucciones de preparación. Estas instrucciones y las fuentes extensas no deben copiarse como párrafos a las diapositivas. El desarrollo oral está en [guion_sustentacion.md](guion_sustentacion.md).
 
